@@ -10,7 +10,7 @@
     "type-check": "tsc -b",
     "format": "prettier --write .",
     "lint:fix": "next lint --fix",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@commitlint/cli": "^19.7.1",
