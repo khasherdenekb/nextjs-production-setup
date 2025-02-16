@@ -1,6 +1,6 @@
 ## This is Next.js production template built by me. (Special thanks for shadcn/ui and Jan Hesters)
 
-![Banner image](/assets/banner-image.jpg)
+![Banner image](/public/assets/banner-image.jpg)
 
 ```bash
 ### How to add image from public folder
