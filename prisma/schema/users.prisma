@@ -1,0 +1,8 @@
+model UserProfile {
+  id                         String   @id @default(cuid())
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+  email                      String   @unique
+  name                       String   @default("")
+  acceptedTermsAndConditions Boolean  @default(false)
+}
