@@ -1,5 +1,9 @@
 ## This is Next.js production template built by me. (Special thanks for shadcn/ui and Jan Hesters)
+
+![Banner image](/assets/banner-image.jpg)
+
 ```bash
+### How to add image from public folder
 Used technologies:
 Framework: Next.js / Reactjs
 Styles: Shadcn ui / Radix ui / Tailwindcss
@@ -11,7 +15,6 @@ Validation: zod
 Toast: sonner
 Linter: eslint / prettier
 Internationalization: i18n
-
 ```
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with
@@ -22,11 +25,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with
 First, run the development server:
 
 ```bash
-bun install 
-#or 
-npm install 
+bun install
+#or
+npm install
 
-then 
+then
 
 npm run dev
 # or
