@@ -1,3 +1,19 @@
+## This is Next.js production template built by me. (Special thanks for shadcn/ui and Jan Hesters)
+```bash
+Used technologies:
+Framework: Next.js / Reactjs
+Styles: Shadcn ui / Radix ui / Tailwindcss
+E2E test: Playwright
+ORM: Prisma
+DB: Postgresql
+Form: React-form-hook
+Validation: zod
+Toast: sonner
+Linter: eslint / prettier
+Internationalization: i18n
+
+```
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with
 [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
@@ -6,11 +22,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with
 First, run the development server:
 
 ```bash
+bun install 
+#or 
+npm install 
+
+then 
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 # or
 bun dev
 ```
