@@ -3,7 +3,6 @@
 ![Banner image](/public/assets/banner-image.jpg)
 
 ```bash
-### How to add image from public folder
 Used technologies:
 Framework: Next.js / Reactjs
 Styles: Shadcn ui / Radix ui / Tailwindcss
