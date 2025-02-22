@@ -3,6 +3,7 @@ import { Geist } from "next/font/google"
 import "@/styles/globals.css"
 import { Locale } from "@/features/internationalization/i18n-config"
 import { siteConfig } from "@/lib/site-config"
+import { ThemeProvider } from "@/components/ui/providers"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,7 +72,17 @@ export default async function RootLayout({
   const { lang } = await params
   return (
     <html lang={lang} suppressHydrationWarning>
-      <body className={`${geistSans.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} antialiased`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          enableColorScheme
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

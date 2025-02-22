@@ -10,16 +10,16 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
 
-      - name: 🔧 Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          bun-version: latest
+          node-version: 20
 
       - name: 📥 Download deps
-        run: bun install
+        run: npm install
 
       - name: 🔬 Lint
-        run: bun run lint
+        run: npm run lint
 
   type-check:
     name: ʦ TypeScript
@@ -28,16 +28,16 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
 
-      - name: 🔧 Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          bun-version: latest
+          node-version: 18
 
       - name: 📥 Download deps
-        run: bun install
+        run: npm install
 
       - name: 🔎 Type check
-        run: bun run type-check --if-present
+        run: npm run type-check --if-present
 
   playwright:
     name: 🎭 Playwright
@@ -46,24 +46,24 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
 
-      - name: 🔧 Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          bun-version: latest
+          node-version: 18
 
       - name: 📥 Download deps
-        run: bun install
+        run: npm install
 
       - name: 🌐 Install Playwright Browsers
-        run: bun x playwright install --with-deps
+        run: npx playwright install --with-deps
 
       - name: 🛠 Setup Database
-        run: bun run prisma:wipe
+        run: npm run prisma:wipe
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: 🎭 Playwright Run
-        run: bun x playwright test
+        run: npx playwright test
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
